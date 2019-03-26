@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number</title>
+</head>
+<body>
+<script>
+    alert("Mời bạn đoán số ngẫu nhiên từ 1-10");
+    var answer = Math.round(Math.random()*10);
+    var guess = parseInt(prompt("Số bạn đoán là ?"));
+    console.log("Đáp án: " + answer)
+
+    for (i=0;i<3; i++) {
+        if(answer == guess) {
+            alert("Bạn đã đoán đúng !");
+            break;
+        }else if (guess > answer){
+            alert("Số bạn đoán lớn hơn đáp án !")
+            guess = prompt("Xin mời đoán lại: ")
+        }else if (answer === ""){
+            alert("Bạn chưa nhập đáp án !")
+            guess = prompt("Mời bạn nhập lại: ")
+        }else {
+            alert("Số bạn đoán nhỏ hơn đáp án !")
+            guess = prompt("Xin mời đoán lại !")
+        }
+    }
+	alert("Kết thúc trò chơi !")
+
+</script>
+</body>
+</html>
